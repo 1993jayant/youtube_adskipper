@@ -14,5 +14,3 @@ It does not take much RAM, neither it requires huge computational effort. I have
 It does not have any graphical user interface(GUI). I have used a very ingenious technique to come out of the while loop whenever one wants to stop the script. I have used an conditional statement to check for the coordinates of the mouse pointer. If the coordinates are (0,0), i.e., if the mouse is at the top left corner of the screen, it breaks out of the while loop.
 
 You can launch the app by running youtube_adskipper.exe file directly.
-
-You can launch the app by running youtube_adskipper.exe file directly.
