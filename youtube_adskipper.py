@@ -16,10 +16,11 @@ templates = []
 templates_directory = "templates"
 
 # iterate over template files
-for template_file in os.listdir(templates_directory):
-    template = cv2.imread(os.path.join(templates_directory, template_file), 0)
-    if template is not None:
-        templates.append(template)
+for template_folder in os.listdir(templates_directory):
+    for template_file in os.listdir(os.path.join(templates_directory, template_folder)):
+        template = cv2.imread(os.path.join(templates_directory, template_folder, template_file), 0)
+        if template is not None:
+            templates.append(template)
 
 
 # setting the threshold for confidence in template matching
