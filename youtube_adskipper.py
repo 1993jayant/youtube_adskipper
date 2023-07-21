@@ -18,7 +18,9 @@ templates_directory = "templates"
 # iterate over template files
 for template_folder in os.listdir(templates_directory):
     for template_file in os.listdir(os.path.join(templates_directory, template_folder)):
-        template = cv2.imread(os.path.join(templates_directory, template_folder, template_file), 0)
+        template = cv2.imread(
+            os.path.join(templates_directory, template_folder, template_file), 0
+        )
         if template is not None:
             templates.append(template)
 
@@ -49,6 +51,8 @@ while True:
         if loc[0].size != 0:
             # clicking on the first match
             pyautogui.click(list(zip(*loc[::-1]))[0])
+            time.sleep(1.5)  # prevents double click with slower browser or internet
+            break
 
     #     Stopping criteria
     if pyautogui.position() == (0, 0):
